@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
-public class fondoMenu extends JPanel{
+public class fondoMenu extends JPanel{ //se crea un panel para la imagen
 	
 	public Image imagenFondo;
 	public URL fondo;
