@@ -16,9 +16,6 @@ public class Ventana extends JFrame {
 	
 	fondoMenu menu;
 	JButton bot1, bot2, bot3;//para los botones
-	MenuBar barra= new MenuBar();
-    Menu programa = new Menu("Programa");
-    Menu ayuda = new Menu("Ayuda");
 	
 	public Ventana()
 	{
@@ -27,20 +24,16 @@ public class Ventana extends JFrame {
 		this.setLocationRelativeTo(null); //ubica la ventana en el centro de la pantalla
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cuando se seleccione la x se cierra
 		
-        setMenuBar(barra); //barras de prueba
-        barra.add(programa);
-        barra.add(ayuda);
-           
-        programa.add("Nuevo Juego");
-        programa.add("Abrir");
-        programa.addSeparator();
-        programa.add("Salir");
-        ayuda.add("Ayuda General");
-        ayuda.addSeparator();
-        ayuda.add("Acerca de...");
+        bot1= new JButton("Nuevo Juego");
+        bot2= new JButton("Opciones");
+        bot3= new JButton("Creditos");
         
 		Container contenedor= getContentPane(); //se crea el contenedor
 		menu= new fondoMenu();
+		//se agregan los botones a la pantalla
+		menu.add(bot1); 
+		menu.add(bot2);
+		menu.add(bot3);
 		contenedor.add(menu); //utiliza la funcion panel para que aparezca la imagen
 		
 		
